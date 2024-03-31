@@ -1,8 +1,8 @@
 import express from "express";
-import movies from "./movies.json" assert { type: "json" };
+import movies from "./movies.json" with { type: "json" };
 import crypto from "node:crypto";
 import cors from "cors";
-import { validateMovie, validatePartialMovie } from "./schemas/movies.js";
+import { validateMovie, validatePartialMovie } from "./schemas/movies.mjs";
 
 const app = express();
 app.disabled("x-powered-by");
