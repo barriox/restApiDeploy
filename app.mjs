@@ -1,5 +1,6 @@
 import express from "express";
-import movies from "./movies.json" assert { type: "json" };
+//import movies from "./movies.json" assert { type: "json" }; Not working in deployment
+const movies = await import("./movies.json");
 import crypto from "node:crypto";
 import cors from "cors";
 import { validateMovie, validatePartialMovie } from "./schemas/movies.mjs";
