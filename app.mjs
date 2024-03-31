@@ -1,5 +1,5 @@
 import express from "express";
-import movies from "./movies.json" with { type: "json" };
+import movies from "./movies.json";
 import crypto from "node:crypto";
 import cors from "cors";
 import { validateMovie, validatePartialMovie } from "./schemas/movies.mjs";
