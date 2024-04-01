@@ -1,13 +1,21 @@
-import express from "express";
-import movies from "./movies.json" assert { type: "json" };
+import express, { json } from "express";
+import movies from "./movies.json" with { type: "json" };
 import crypto from "node:crypto";
 import cors from "cors";
 import { validateMovie, validatePartialMovie } from "./schemas/movies.mjs";
 
+/*
+import fs from "node:fs";
+const movies = JSON.parse(fs.readFileSync("./movies.json"));
+*/
+/*import { createRequire} from "node:module";
+const require = createRequire(import.meta.url);
+const movies = require("./movies.json");*/
+
 const app = express();
 app.disabled("x-powered-by");
 
-app.use(express.json());
+app.use(json());
 //cors middleware
 app.use(
   cors({
