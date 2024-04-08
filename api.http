@@ -8,7 +8,7 @@ GET http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
 GET http://localhost:3000/movies?genre=Drama
 
 ### create a movie with POST
-POST http://localhost:3000/movies?genre=Drama
+POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
